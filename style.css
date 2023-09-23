@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 #desktop-nav {
@@ -41,39 +42,36 @@
 
 /* HOME PRODUCTS SECTION */
 
-#homepage {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    margin: 5rem;
-    gap: 3rem;
+
+.home-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
-.home-products {
-    display:flex;
+.home-products-grid {
+    grid-gap: 1.3rem;
+    display: grid;
+    gap: 1.3rem;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-areas:
+        "one two four"
+        "one two four-low";
 }
 
-.cosmetics {
-    width: 470px;
-    height: 400px;
-    border-radius: 2rem;
-
+.grid-one {
+    grid-area: one;
 }
 
-.clothing {
-    width: 600px;
-    height: 470px;
-    border-radius: 2rem;
-    
+.grid-two {
+    grid-area: two;
 }
 
-.food {
-    width: 600px;
-    height: 400px;
-    border-radius: 2rem;
+.grid-three {
+    grid-area: four;
 }
 
-.spices {
-    width: 470px;
-    border-radius: 2rem;
+.grid-four {
+    grid-area: four-low;
 }
